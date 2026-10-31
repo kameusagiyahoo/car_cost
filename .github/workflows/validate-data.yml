@@ -11,6 +11,8 @@ on:
     paths:
       - 'data/**'
       - 'scripts/validate_data.py'
+      - 'scripts/import_listings.py'
+      - 'examples/**'
       - '.github/workflows/validate-data.yml'
   workflow_dispatch:
 permissions:
