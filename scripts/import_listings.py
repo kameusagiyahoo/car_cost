@@ -48,7 +48,7 @@ def main():
                 raise ValueError(f"item {i}: invalid seat count")
             if x["drive"] not in ("2WD", "4WD") or x["repairHistory"] not in ("none", "yes", "unknown"):
                 raise ValueError(f"item {i}: invalid drive or repair history")
-            if not isinstance(x["verifiedAt"], str) or not re.fullmatch(r"\\d{4}-\\d{2}-\\d{2}", x["verifiedAt"]):
+            if not isinstance(x["verifiedAt"], str) or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", x["verifiedAt"]):
                 raise ValueError(f"item {i}: invalid verification date")
             if not isinstance(x["url"], str):
                 raise ValueError(f"item {i}: URL must be a string")
