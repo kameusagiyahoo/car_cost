@@ -8,9 +8,9 @@
     "7": 0.48
   },
   "annualMaintenanceMan": {
-    "gas": 8,
-    "hev": 8,
-    "phev": 10
+    "gas": 4,
+    "hev": 4,
+    "phev": 5
   },
   "fuelYenPerLiter": 175,
   "grantMan": 150,
@@ -23,5 +23,11 @@
     "kind": "model_estimate",
     "note": "将来売却額は仮定の残価曲線で予測。査定実績ではない。",
     "url": null
-  }
+  },
+  "annualInsuranceMan": {
+    "gas": 4,
+    "hev": 4,
+    "phev": 5
+  },
+  "costBreakdownNote": "従来の年8/8/10万円を整備・消耗品と保険の仮定値に半分ずつ配分した暫定値。税金・車検費は含まない。実見積・統計に基づかない。中古車追加整備費は別途仮定。"
 }
