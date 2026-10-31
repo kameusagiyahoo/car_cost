@@ -24,6 +24,8 @@ def main():
         records = candidate["listings"]
         if not isinstance(records, list) or not records:
             raise ValueError("listings must be a nonempty array")
+        vehicles = json.loads((ROOT / "data" / "vehicles.json").read_text(encoding="utf-8"))["vehicles"]
+        known = {(v["id"], t["id"]) for v in vehicles for t in v["powertrains"]}
         urls = {x["url"] for x in current["listings"]}
         new = []
         for i, x in enumerate(records):
@@ -32,6 +34,18 @@ def main():
             missing = [k for k in REQUIRED if k not in x or x[k] in (None, "")]
             if missing:
                 raise ValueError(f"item {i}: missing {missing}")
+            if (x["vehicleId"], x["powertrain"]) not in known:
+                raise ValueError(f"item {i}: unknown vehicle or powertrain")
+            if type(x["modelYear"]) is not int or not 1990 <= x["modelYear"] <= 2026:
+                raise ValueError(f"item {i}: invalid model year")
+            if type(x["km"]) not in (int, float) or not 0 <= x["km"] <= 1000000:
+                raise ValueError(f"item {i}: invalid mileage")
+            if type(x["totalMan"]) not in (int, float) or not 0 < x["totalMan"] <= 10000:
+                raise ValueError(f"item {i}: invalid total price")
+            if type(x["seats"]) is not int or not 1 <= x["seats"] <= 10:
+                raise ValueError(f"item {i}: invalid seat count")
+            if x["drive"] not in ("2WD", "4WD") or x["repairHistory"] not in ("none", "yes", "unknown"):
+                raise ValueError(f"item {i}: invalid drive or repair history")
             u = urlsplit(x["url"])
             if u.scheme != "https" or not u.netloc:
                 raise ValueError(f"item {i}: invalid HTTPS URL")
