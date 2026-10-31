@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-10-31",
+  "currency": "JPY",
+  "note": "公開掲載のスナップショット。支払総額は地域・時点・販売条件で変動し、在庫保証なし。サンプルが少ないため参考値。",
+  "listings": [
+    {
+      "vehicleId": "sienta",
+      "powertrain": "hev",
+      "grade": "Z",
+      "modelYear": 2023,
+      "km": 30000,
+      "totalMan": 269.6,
+      "source": "価格.com（大阪府・2WD・5人乗り）",
+      "url": "https://kakaku.com/kuruma/used/item/42827353/",
+      "repairHistory": "none",
+      "seats": 5
+    },
+    {
+      "vehicleId": "sienta",
+      "powertrain": "hev",
+      "grade": "Z",
+      "modelYear": 2023,
+      "km": 30000,
+      "totalMan": 274.7,
+      "source": "車選びドットコム（広島トヨタ・7人乗り）",
+      "url": "https://www.kurumaerabi.com/usedcar/detail/40025059-8826210/",
+      "repairHistory": "none",
+      "seats": 7
+    },
+    {
+      "vehicleId": "prius",
+      "powertrain": "phev",
+      "grade": "Z",
+      "modelYear": 2023,
+      "km": 32000,
+      "totalMan": 352.4,
+      "source": "グーネット（ケーユー本店）",
+      "url": "https://www.goo-net.com/usedcar/brand-TOYOTA/car-PRIUS/option-phv/",
+      "repairHistory": "none"
+    }
+  ]
+}
