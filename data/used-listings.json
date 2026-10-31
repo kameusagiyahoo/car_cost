@@ -38,6 +38,62 @@
       "source": "グーネット（ケーユー本店）",
       "url": "https://www.goo-net.com/usedcar/brand-TOYOTA/car-PRIUS/option-phv/",
       "repairHistory": "none"
+    },
+    {
+      "vehicleId": "sienta",
+      "powertrain": "hev",
+      "grade": "Z",
+      "modelYear": 2023,
+      "km": 33000,
+      "totalMan": 309.9,
+      "source": "クロスロード / ネクステージ豊見城店",
+      "url": "https://www.o-cross.net/car/toyota/S077/004502-1261018-N0004/",
+      "repairHistory": "none",
+      "seats": 7,
+      "drive": "2WD",
+      "verifiedAt": "2026-10-31"
+    },
+    {
+      "vehicleId": "sienta",
+      "powertrain": "hev",
+      "grade": "Z",
+      "modelYear": 2023,
+      "km": 32300,
+      "totalMan": 292.9,
+      "source": "WECARS 広島西店",
+      "url": "https://www.wecars.co.jp/search/detail?comid=A0&stockid=2610-004886",
+      "repairHistory": "none",
+      "seats": 7,
+      "drive": "2WD",
+      "verifiedAt": "2026-10-31"
+    },
+    {
+      "vehicleId": "prius",
+      "powertrain": "phev",
+      "grade": "Z",
+      "modelYear": 2023,
+      "km": 32000,
+      "totalMan": 355.9,
+      "source": "carview / ネクステージ横須賀店",
+      "url": "https://ucar.carview.yahoo.co.jp/model/toyota/prius/3588269927UA/",
+      "repairHistory": "none",
+      "seats": 5,
+      "drive": "2WD",
+      "verifiedAt": "2026-10-31"
+    },
+    {
+      "vehicleId": "prius",
+      "powertrain": "phev",
+      "grade": "Z",
+      "modelYear": 2023,
+      "km": 34000,
+      "totalMan": 366.6,
+      "source": "カーセンサー / NTP名古屋トヨペット稲沢店",
+      "url": "https://www.carsensor.net/usedcar/detail/AU7397381134/index.html",
+      "repairHistory": "none",
+      "seats": 5,
+      "drive": "2WD",
+      "verifiedAt": "2026-10-31"
     }
   ]
 }
