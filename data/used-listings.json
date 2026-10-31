@@ -153,7 +153,10 @@
       "seats": 7,
       "drive": "2WD",
       "verifiedAt": "2026-10-31",
-      "notes": "店舗管理番号431013838305。支払総額は展示店で11月登録の場合。茨城県内販売限定。"
+      "notes": "店舗管理番号431013838305。支払総額は展示店で11月登録の場合。茨城県内販売限定。",
+      "salesRegion": "茨城県内限定",
+      "deliveryCostMan": null,
+      "purchaseEligibility": "restricted"
     },
     {
       "vehicleId": "prius",
@@ -168,7 +171,10 @@
       "seats": 5,
       "drive": "2WD",
       "verifiedAt": "2026-10-31",
-      "notes": "支払総額は展示店で11月登録の場合。近隣県への販売限定。"
+      "notes": "支払総額は展示店で11月登録の場合。近隣県への販売限定。",
+      "salesRegion": "販売店指定の近隣県限定",
+      "deliveryCostMan": null,
+      "purchaseEligibility": "restricted"
     }
   ]
 }
