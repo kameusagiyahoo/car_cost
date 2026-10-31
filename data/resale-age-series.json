@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-10-31",
+  "note": "2026年9月12日集計の年式別横断面。個体の経年追跡ではないため年次減価率の直接推定はできない。車両仕様や市場時点差を含む。",
+  "series": [
+    {
+      "vehicleId": "sienta",
+      "powertrain": "hev",
+      "grade": "Z",
+      "seats": 7,
+      "drive": "2WD",
+      "source": "リセバ総研 2026-09-12 シエンタ ハイブリッドZ MXPL10G",
+      "url": "https://resalevalue.jp/article/sienta_20260912/",
+      "observations": [
+        {
+          "modelYear": 2022,
+          "age": 4,
+          "averageBuybackMan": 182.25
+        },
+        {
+          "modelYear": 2023,
+          "age": 3,
+          "averageBuybackMan": 214
+        },
+        {
+          "modelYear": 2024,
+          "age": 2,
+          "averageBuybackMan": 239.4117
+        },
+        {
+          "modelYear": 2025,
+          "age": 1,
+          "averageBuybackMan": 250.1428
+        },
+        {
+          "modelYear": 2026,
+          "age": 0,
+          "averageBuybackMan": 273.3333
+        }
+      ],
+      "limitations": "異なる年式の平均値を比較した横断面。装備・走行距離は均一ではなく、将来価格の統計的予測区間ではない。"
+    }
+  ],
+  "forecast": {
+    "baseAnnualDecline": 0.12,
+    "lowDecline": 0.06,
+    "highDecline": 0.18,
+    "meaning": "低減価率6%は売却額の上限、高減価率18%は下限。感度分析用の仮定値であり信頼区間ではない。"
+  }
+}
