@@ -1,0 +1,246 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-31",
+  "vehicles": [
+    {
+      "id": "rav4",
+      "name": "トヨタ RAV4",
+      "powertrains": [
+        {
+          "id": "gas",
+          "label": "ガソリン",
+          "newPriceMan": 330,
+          "kmPerLiter": 14,
+          "priceEvidence": {
+            "kind": "assumption",
+            "url": "https://toyota.jp/",
+            "retrievedAt": null,
+            "note": "比較用の仮定値。リンク先は一般的なメーカー参照先であり、この価格の裏付けではありません。"
+          }
+        },
+        {
+          "id": "hev",
+          "label": "HEV",
+          "newPriceMan": 390,
+          "kmPerLiter": 20,
+          "priceEvidence": {
+            "kind": "assumption",
+            "url": "https://toyota.jp/",
+            "retrievedAt": null,
+            "note": "比較用の仮定値。リンク先は一般的なメーカー参照先であり、この価格の裏付けではありません。"
+          }
+        },
+        {
+          "id": "phev",
+          "label": "PHEV",
+          "newPriceMan": 560,
+          "kmPerLiter": 18,
+          "priceEvidence": {
+            "kind": "assumption",
+            "url": "https://toyota.jp/",
+            "retrievedAt": null,
+            "note": "比較用の仮定値。リンク先は一般的なメーカー参照先であり、この価格の裏付けではありません。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sienta",
+      "name": "トヨタ シエンタ",
+      "powertrains": [
+        {
+          "id": "gas",
+          "label": "ガソリン",
+          "newPriceMan": 230,
+          "kmPerLiter": 17,
+          "priceEvidence": {
+            "kind": "assumption",
+            "url": "https://toyota.jp/",
+            "retrievedAt": null,
+            "note": "比較用の仮定値。リンク先は一般的なメーカー参照先であり、この価格の裏付けではありません。"
+          }
+        },
+        {
+          "id": "hev",
+          "label": "HEV",
+          "newPriceMan": 285,
+          "kmPerLiter": 26,
+          "priceEvidence": {
+            "kind": "assumption",
+            "url": "https://toyota.jp/",
+            "retrievedAt": null,
+            "note": "比較用の仮定値。リンク先は一般的なメーカー参照先であり、この価格の裏付けではありません。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "prius",
+      "name": "トヨタ プリウス",
+      "powertrains": [
+        {
+          "id": "hev",
+          "label": "HEV",
+          "newPriceMan": 350,
+          "kmPerLiter": 28,
+          "priceEvidence": {
+            "kind": "assumption",
+            "url": "https://toyota.jp/",
+            "retrievedAt": null,
+            "note": "比較用の仮定値。リンク先は一般的なメーカー参照先であり、この価格の裏付けではありません。"
+          }
+        },
+        {
+          "id": "phev",
+          "label": "PHEV",
+          "newPriceMan": 460,
+          "kmPerLiter": 23,
+          "priceEvidence": {
+            "kind": "assumption",
+            "url": "https://toyota.jp/",
+            "retrievedAt": null,
+            "note": "比較用の仮定値。リンク先は一般的なメーカー参照先であり、この価格の裏付けではありません。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "harrier",
+      "name": "トヨタ ハリアー",
+      "powertrains": [
+        {
+          "id": "gas",
+          "label": "ガソリン",
+          "newPriceMan": 350,
+          "kmPerLiter": 15,
+          "priceEvidence": {
+            "kind": "assumption",
+            "url": "https://toyota.jp/",
+            "retrievedAt": null,
+            "note": "比較用の仮定値。リンク先は一般的なメーカー参照先であり、この価格の裏付けではありません。"
+          }
+        },
+        {
+          "id": "hev",
+          "label": "HEV",
+          "newPriceMan": 430,
+          "kmPerLiter": 22,
+          "priceEvidence": {
+            "kind": "assumption",
+            "url": "https://toyota.jp/",
+            "retrievedAt": null,
+            "note": "比較用の仮定値。リンク先は一般的なメーカー参照先であり、この価格の裏付けではありません。"
+          }
+        },
+        {
+          "id": "phev",
+          "label": "PHEV",
+          "newPriceMan": 620,
+          "kmPerLiter": 18,
+          "priceEvidence": {
+            "kind": "assumption",
+            "url": "https://toyota.jp/",
+            "retrievedAt": null,
+            "note": "比較用の仮定値。リンク先は一般的なメーカー参照先であり、この価格の裏付けではありません。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "corollacross",
+      "name": "トヨタ カローラ クロス",
+      "powertrains": [
+        {
+          "id": "gas",
+          "label": "ガソリン",
+          "newPriceMan": 260,
+          "kmPerLiter": 15,
+          "priceEvidence": {
+            "kind": "assumption",
+            "url": "https://toyota.jp/",
+            "retrievedAt": null,
+            "note": "比較用の仮定値。リンク先は一般的なメーカー参照先であり、この価格の裏付けではありません。"
+          }
+        },
+        {
+          "id": "hev",
+          "label": "HEV",
+          "newPriceMan": 320,
+          "kmPerLiter": 24,
+          "priceEvidence": {
+            "kind": "assumption",
+            "url": "https://toyota.jp/",
+            "retrievedAt": null,
+            "note": "比較用の仮定値。リンク先は一般的なメーカー参照先であり、この価格の裏付けではありません。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "corolla",
+      "name": "トヨタ カローラ",
+      "powertrains": [
+        {
+          "id": "gas",
+          "label": "ガソリン",
+          "newPriceMan": 230,
+          "kmPerLiter": 17,
+          "priceEvidence": {
+            "kind": "assumption",
+            "url": "https://toyota.jp/",
+            "retrievedAt": null,
+            "note": "比較用の仮定値。リンク先は一般的なメーカー参照先であり、この価格の裏付けではありません。"
+          }
+        },
+        {
+          "id": "hev",
+          "label": "HEV",
+          "newPriceMan": 290,
+          "kmPerLiter": 28,
+          "priceEvidence": {
+            "kind": "assumption",
+            "url": "https://toyota.jp/",
+            "retrievedAt": null,
+            "note": "比較用の仮定値。リンク先は一般的なメーカー参照先であり、この価格の裏付けではありません。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "roomy",
+      "name": "トヨタ ルーミー",
+      "powertrains": [
+        {
+          "id": "gas",
+          "label": "ガソリン",
+          "newPriceMan": 200,
+          "kmPerLiter": 17,
+          "priceEvidence": {
+            "kind": "assumption",
+            "url": "https://toyota.jp/",
+            "retrievedAt": null,
+            "note": "比較用の仮定値。リンク先は一般的なメーカー参照先であり、この価格の裏付けではありません。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "outlander",
+      "name": "三菱 アウトランダー",
+      "powertrains": [
+        {
+          "id": "phev",
+          "label": "PHEV",
+          "newPriceMan": 600,
+          "kmPerLiter": 16,
+          "priceEvidence": {
+            "kind": "assumption",
+            "url": "https://www.mitsubishi-motors.co.jp/lineup/outlander_phev/",
+            "retrievedAt": null,
+            "note": "比較用の仮定値。リンク先は一般的なメーカー参照先であり、この価格の裏付けではありません。"
+          }
+        }
+      ]
+    }
+  ]
+}
