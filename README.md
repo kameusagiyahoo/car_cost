@@ -56,3 +56,6 @@ Repository > Settings > Pages > Build and deployment > Deploy from a branch > `m
 2. `python3 scripts/import_listings.py path/to/candidate.json` で重複URL・必須項目をチェックするドライランを行います。これは外部サイトの真偽を検証しません。
 3. `python3 scripts/import_listings.py path/to/candidate.json --apply` で `data/used-listings.json` に追記し、既存のデータ検証を実行します。失敗時はファイルを元に戻します。
 4. `git diff` で追加内容と出典を確認してからコミットしてください。GitHub Actionsでは構文チェック、サンプルのドライラン、既存データ検証を行います。自動スクレイピングや自動コミットはしません。
+
+## 自動テスト
+`python3 -m unittest discover -s tests -v` で取り込み処理の9テストを実行します。テストごとに一時ディレクトリへデータを複製し、ドライラン・正常取り込み・重複・欠落・不正値・既存データ検証を確認します。GitHub Actionsでpush/PR時に実行します。テスト追加だけではCI成功を保証しないため、Actionsの実行ログを確認してください。
