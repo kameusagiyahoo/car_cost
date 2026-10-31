@@ -12,7 +12,7 @@ for(const id of ['results','chart','regression','audit','regionWarnings']) eleme
 const context={document:{getElementById:id=>{assert.ok(elements.has(id),'missing control: '+id);return elements.get(id);}},console,Math,Number,Array,Date};
 vm.createContext(context);
 vm.runInContext(source,context);
-vm.runInContext("catalog={vehicles:[{id:'prius',powertrains:[{id:'phev',label:'PHEV',grade:'Z',newPriceMan:400,kmPerLiter:20,priceEvidence:{kind:'assumption'}}]}]};assumptions={usedPriceRatios:{3:0.8},fuelYenPerLiter:175,annualMaintenanceMan:{phev:5},grantMan:0,resaleEvidence:{kind:'assumption'}};usedListings=[];",context);
+vm.runInContext("catalog={vehicles:[{id:'prius',powertrains:[{id:'phev',label:'PHEV',grade:'Z',newPriceMan:400,kmPerLiter:20,priceEvidence:{kind:'assumption'}}]}]};assumptions={usedPriceRatios:{3:0.8},fuelYenPerLiter:175,annualMaintenanceMan:{phev:5},annualInsuranceMan:{phev:4},grantMan:0,resaleEvidence:{kind:'assumption'}};usedListings=[];",context);
 const calc=()=>vm.runInContext("calculate(catalog.vehicles[0].powertrains[0],false)",context);
 let x=calc();
 assert.ok(Math.abs(x.fuelCost-21.875)<1e-8);
@@ -20,6 +20,9 @@ assert.ok(Math.abs(x.electricCost-(5*10000*.5*16/100*30/.9/10000))<1e-8);
 assert.equal(x.chargerInstall,10);
 assert.equal(x.purchaseFees,10);
 assert.equal(x.annualTaxCost,15);
+assert.equal(x.insuranceCost,20);
+assert.equal(x.maintenanceCost,25);
+assert.ok(Math.abs(x.running-(x.fuelCost+x.electricCost+x.maintenanceCost+x.insuranceCost+x.annualTaxCost+x.inspectionCost))<1e-8);
 assert.equal(x.inspectionCost,0);
 assert.equal(x.inspectionCount,2);
 assert.equal(vm.runInContext('inspectionCountForOwnership(3,5)',context),3);
@@ -54,4 +57,6 @@ assert.equal(vm.runInContext("matchingListings(catalog.vehicles[0].powertrains[0
 vm.runInContext("render()",context);
 assert.match(elements.get('results').innerHTML,/燃費・維持費の根拠/);
 assert.match(elements.get('results').innerHTML,/充電設備/);
+assert.match(elements.get('results').innerHTML,/保険/);
+assert.match(elements.get('results').innerHTML,/整備・消耗品/);
 console.log('PASS: JS syntax, PHEV TCO, charging efficiency, region filtering, rendered evidence');
