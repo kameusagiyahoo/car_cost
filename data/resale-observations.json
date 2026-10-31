@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-10-31",
+  "method": "Observed buyback transactions anchor a scenario curve; future prices are projections, not observed resale values.",
+  "series": [
+    {
+      "vehicleId": "sienta",
+      "powertrain": "hev",
+      "grade": "Z",
+      "modelYear": 2023,
+      "referenceAgeYears": 3,
+      "referenceKm": 30000,
+      "source": "ネクステージ 2026年10月査定実績",
+      "url": "https://www.nextage.jp/kaitori/souba/toyota/sienta/2023/",
+      "valuesMan": [
+        248.8,
+        248.8,
+        253.8
+      ],
+      "sourceKm": [
+        33000,
+        33000,
+        39000
+      ],
+      "observedMedianMan": 248.8,
+      "quality": "limited",
+      "limitations": "駆動方式・乗車定員・装備・査定条件は個別には未確認。重複可能性あり。"
+    },
+    {
+      "vehicleId": "prius",
+      "powertrain": "phev",
+      "grade": "Z",
+      "modelYear": 2023,
+      "referenceAgeYears": 3,
+      "referenceKm": 30000,
+      "source": "ネクステージ 2026年7〜9月査定実績",
+      "url": "https://www.nextage.jp/kaitori/souba/toyota/prius%2Bphv/2023/",
+      "valuesMan": [
+        333.7,
+        312,
+        307.1,
+        323.3
+      ],
+      "sourceKm": [
+        28000,
+        28000,
+        32000,
+        29000
+      ],
+      "observedMedianMan": 317.65,
+      "quality": "limited",
+      "limitations": "個別の装備・車両状態が異なり、取引額を保証しない。"
+    }
+  ],
+  "annualDeclineScenario": 0.12,
+  "annualKmPenaltyPer10000": 0.02
+}
