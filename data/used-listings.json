@@ -124,6 +124,21 @@
       "drive": "2WD",
       "verifiedAt": "2026-10-31",
       "notes": "2023年式、FF、支払総額341.1万円。走行4.8万kmで標準の3年落ち・3万km比較範囲外。販売条件・在庫は変動。"
+    },
+    {
+      "vehicleId": "sienta",
+      "powertrain": "hev",
+      "grade": "Z",
+      "modelYear": 2023,
+      "km": 48200,
+      "totalMan": 254.3,
+      "source": "トヨタ中古車オンラインストア / トヨタユーゼック",
+      "url": "https://toyota-outlet.gazoo.com/detail?carId=863512252161",
+      "repairHistory": "none",
+      "seats": 7,
+      "drive": "2WD",
+      "verifiedAt": "2026-10-31",
+      "notes": "支払総額254.3万円（車両239.0万円・諸費用15.3万円）。11月登録条件、納車地域限定。3万km近傍の比較範囲外。掲載期限11月6日。"
     }
   ]
 }
