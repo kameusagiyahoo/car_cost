@@ -109,6 +109,21 @@
       "drive": "2WD",
       "verifiedAt": "2026-10-31",
       "notes": "PHEV Zと明記、支払総額357.5万円。遠方購入時の陸送費別途。"
+    },
+    {
+      "vehicleId": "prius",
+      "powertrain": "phev",
+      "grade": "Z",
+      "modelYear": 2023,
+      "km": 48000,
+      "totalMan": 341.1,
+      "source": "トヨタ中古車オンラインストア（東京都納車）",
+      "url": "https://toyota-outlet.gazoo.com/detail?carId=0360141A24331",
+      "repairHistory": "none",
+      "seats": 5,
+      "drive": "2WD",
+      "verifiedAt": "2026-10-31",
+      "notes": "2023年式、FF、支払総額341.1万円。走行4.8万kmで標準の3年落ち・3万km比較範囲外。販売条件・在庫は変動。"
     }
   ]
 }
