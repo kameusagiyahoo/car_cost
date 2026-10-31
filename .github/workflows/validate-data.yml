@@ -4,6 +4,8 @@ on:
     paths:
       - 'data/**'
       - 'scripts/validate_data.py'
+      - 'scripts/import_listings.py'
+      - 'examples/**'
       - '.github/workflows/validate-data.yml'
   pull_request:
     paths:
@@ -18,5 +20,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Check importer syntax
+        run: python3 -m py_compile scripts/import_listings.py scripts/validate_data.py
+      - name: Check candidate import dry-run
+        run: python3 scripts/import_listings.py examples/listing-candidate.example.json
       - name: Check data quality
         run: python3 scripts/validate_data.py
