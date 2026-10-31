@@ -50,3 +50,9 @@ Repository > Settings > Pages > Build and deployment > Deploy from a branch > `m
 
 ## データ更新時の自動検証
 `python3 scripts/validate_data.py` でJSONデータの整合性と出典メタデータを検査できます。`.github/workflows/validate-data.yml` により、dataディレクトリ・検証スクリプト・ワークフローの変更時にGitHub Actionsで自動実行します。エラーはジョブ失敗、仕様不足・重複URLの疑いは警告です。警告が残っていてもジョブは成功するため、結果ログを確認してください。外部掲載URLの実在性や価格の真偽までは検証していません。
+
+## 中古車掲載候補の段階的取り込み
+1. `examples/listing-candidate.example.json` を参考に、**実際の掲載情報を人手で確認して**候補JSONを作成します（サンプルURL・価格は架空で本番投入禁止）。
+2. `python3 scripts/import_listings.py path/to/candidate.json` で重複URL・必須項目をチェックするドライランを行います。これは外部サイトの真偽を検証しません。
+3. `python3 scripts/import_listings.py path/to/candidate.json --apply` で `data/used-listings.json` に追記し、既存のデータ検証を実行します。失敗時はファイルを元に戻します。
+4. `git diff` で追加内容と出典を確認してからコミットしてください。GitHub Actionsでは構文チェック、サンプルのドライラン、既存データ検証を行います。自動スクレイピングや自動コミットはしません。
