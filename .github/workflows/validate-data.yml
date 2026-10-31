@@ -6,6 +6,7 @@ on:
       - 'scripts/validate_data.py'
       - 'scripts/import_listings.py'
       - 'examples/**'
+      - 'tests/**'
       - '.github/workflows/validate-data.yml'
   pull_request:
     paths:
@@ -28,3 +29,5 @@ jobs:
         run: python3 scripts/import_listings.py examples/listing-candidate.example.json
       - name: Check data quality
         run: python3 scripts/validate_data.py
+      - name: Run importer regression tests
+        run: python3 -m unittest discover -s tests -v
