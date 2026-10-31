@@ -2,6 +2,7 @@ name: Validate car cost data
 on:
   push:
     paths:
+      - 'index.html'
       - 'data/**'
       - 'scripts/validate_data.py'
       - 'scripts/import_listings.py'
@@ -32,3 +33,5 @@ jobs:
         run: python3 scripts/validate_data.py
       - name: Run importer regression tests
         run: python3 -m unittest discover -s tests -v
+      - name: Run browser logic regression tests
+        run: node tests/test_browser_logic.cjs
