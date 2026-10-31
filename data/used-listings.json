@@ -94,6 +94,21 @@
       "seats": 5,
       "drive": "2WD",
       "verifiedAt": "2026-10-31"
+    },
+    {
+      "vehicleId": "prius",
+      "powertrain": "phev",
+      "grade": "Z",
+      "modelYear": 2023,
+      "km": 33000,
+      "totalMan": 357.5,
+      "source": "車選びドットコム / ガリバー1号知立店",
+      "url": "https://www.kurumaerabi.com/usedcar/detail/40029981-1060482/",
+      "repairHistory": "none",
+      "seats": 5,
+      "drive": "2WD",
+      "verifiedAt": "2026-10-31",
+      "notes": "PHEV Zと明記、支払総額357.5万円。遠方購入時の陸送費別途。"
     }
   ]
 }
