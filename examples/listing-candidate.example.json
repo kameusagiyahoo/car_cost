@@ -1,0 +1,18 @@
+{
+  "listings": [
+    {
+      "vehicleId": "sienta",
+      "powertrain": "hev",
+      "grade": "Z",
+      "modelYear": 2023,
+      "km": 32000,
+      "totalMan": 280,
+      "source": "要確認：販売店名",
+      "url": "https://example.com/replace-with-real-listing",
+      "repairHistory": "none",
+      "seats": 7,
+      "drive": "2WD",
+      "verifiedAt": "2026-10-31"
+    }
+  ]
+}
