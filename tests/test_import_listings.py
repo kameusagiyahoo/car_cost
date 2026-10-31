@@ -86,6 +86,24 @@ class ImportTests(unittest.TestCase):
         self.assertNotEqual(result.returncode, 0)
         self.assertEqual(self.target.read_bytes(), self.original)
 
+    def test_validation_failure_rolls_back(self):
+        assumptions = self.root / "data" / "assumptions.json"
+        data = json.loads(assumptions.read_text(encoding="utf-8"))
+        data["fuelYenPerLiter"] = -1
+        assumptions.write_text(json.dumps(data), encoding="utf-8")
+        result = self.run_import(dict(BASE), apply=True)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertEqual(self.target.read_bytes(), self.original)
+
+    def test_duplicate_urls_within_candidate_rejected(self):
+        candidate = self.root / "candidate.json"
+        candidate.write_text(json.dumps({"listings": [BASE, BASE]}), encoding="utf-8")
+        result = subprocess.run(
+            [sys.executable, str(self.root / "scripts" / "import_listings.py"), str(candidate), "--apply"],
+            capture_output=True, text=True, timeout=20)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertEqual(self.target.read_bytes(), self.original)
+
     def test_validator_passes_current_repository_data(self):
         result = subprocess.run(
             [sys.executable, str(self.root / "scripts" / "validate_data.py")],
