@@ -51,26 +51,28 @@
         {
           "id": "gas",
           "label": "ガソリン",
-          "newPriceMan": 230,
-          "kmPerLiter": 17,
+          "newPriceMan": 280.28,
+          "kmPerLiter": 18,
           "priceEvidence": {
-            "kind": "assumption",
-            "url": "https://toyota.jp/",
-            "retrievedAt": null,
-            "note": "比較用の仮定値。リンク先は一般的なメーカー参照先であり、この価格の裏付けではありません。"
-          }
+            "kind": "official_list_price",
+            "url": "https://toyota.jp/sienta/",
+            "retrievedAt": "2026-10-31",
+            "note": "メーカー/正規販売店の公表車両本体価格（税込）。オプション・登録諸費用を含まない。中古車価格は別途仮定の価格率による推計。"
+          },
+          "grade": "Z・2WD・7人乗り"
         },
         {
           "id": "hev",
           "label": "HEV",
-          "newPriceMan": 285,
-          "kmPerLiter": 26,
+          "newPriceMan": 318.34,
+          "kmPerLiter": 27.6,
           "priceEvidence": {
-            "kind": "assumption",
-            "url": "https://toyota.jp/",
-            "retrievedAt": null,
-            "note": "比較用の仮定値。リンク先は一般的なメーカー参照先であり、この価格の裏付けではありません。"
-          }
+            "kind": "official_list_price",
+            "url": "https://toyota.jp/sienta/",
+            "retrievedAt": "2026-10-31",
+            "note": "メーカー/正規販売店の公表車両本体価格（税込）。オプション・登録諸費用を含まない。中古車価格は別途仮定の価格率による推計。"
+          },
+          "grade": "Z・2WD・7人乗り"
         }
       ]
     },
@@ -93,14 +95,15 @@
         {
           "id": "phev",
           "label": "PHEV",
-          "newPriceMan": 460,
-          "kmPerLiter": 23,
+          "newPriceMan": 464.53,
+          "kmPerLiter": 25.9,
           "priceEvidence": {
-            "kind": "assumption",
-            "url": "https://toyota.jp/",
-            "retrievedAt": null,
-            "note": "比較用の仮定値。リンク先は一般的なメーカー参照先であり、この価格の裏付けではありません。"
-          }
+            "kind": "official_list_price",
+            "url": "https://www.toyota-mobi-tokyo.co.jp/carlineup/prius/grade",
+            "retrievedAt": "2026-10-31",
+            "note": "メーカー/正規販売店の公表車両本体価格（税込）。オプション・登録諸費用を含まない。中古車価格は別途仮定の価格率による推計。"
+          },
+          "grade": "Z・2WD"
         }
       ]
     },
