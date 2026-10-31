@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-31",
+  "usedPriceRatios": {
+    "1": 0.86,
+    "3": 0.72,
+    "5": 0.6,
+    "7": 0.48
+  },
+  "annualMaintenanceMan": {
+    "gas": 8,
+    "hev": 8,
+    "phev": 10
+  },
+  "fuelYenPerLiter": 175,
+  "grantMan": 150,
+  "grantEvidence": {
+    "kind": "assumption",
+    "note": "PHEV新車の仮の補助金。実際の適用可否・返還条件は未検証。",
+    "url": "https://www.cev-pc.or.jp/"
+  },
+  "resaleEvidence": {
+    "kind": "model_estimate",
+    "note": "将来売却額は仮定の残価曲線で予測。査定実績ではない。",
+    "url": null
+  }
+}
