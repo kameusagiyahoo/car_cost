@@ -104,6 +104,21 @@ class ImportTests(unittest.TestCase):
         self.assertNotEqual(result.returncode, 0)
         self.assertEqual(self.target.read_bytes(), self.original)
 
+    def test_nonfinite_price_rejected(self):
+        result = self.run_import({**BASE, "totalMan": float("nan")}, apply=True)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertEqual(self.target.read_bytes(), self.original)
+
+    def test_nonfinite_mileage_rejected(self):
+        result = self.run_import({**BASE, "km": float("inf")}, apply=True)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertEqual(self.target.read_bytes(), self.original)
+
+    def test_invalid_date_rejected(self):
+        result = self.run_import({**BASE, "verifiedAt": "yesterday"}, apply=True)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertEqual(self.target.read_bytes(), self.original)
+
     def test_validator_passes_current_repository_data(self):
         result = subprocess.run(
             [sys.executable, str(self.root / "scripts" / "validate_data.py")],
