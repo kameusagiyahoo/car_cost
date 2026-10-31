@@ -139,6 +139,36 @@
       "drive": "2WD",
       "verifiedAt": "2026-10-31",
       "notes": "支払総額254.3万円（車両239.0万円・諸費用15.3万円）。11月登録条件、納車地域限定。3万km近傍の比較範囲外。掲載期限11月6日。"
+    },
+    {
+      "vehicleId": "sienta",
+      "powertrain": "hev",
+      "grade": "Z",
+      "modelYear": 2023,
+      "km": 30000,
+      "totalMan": 295.4,
+      "source": "トヨタ認定中古車 / ネッツ茨城 マイネ笠間",
+      "url": "https://toyota.jp/ucar/cardetail/431013838305/",
+      "repairHistory": "none",
+      "seats": 7,
+      "drive": "2WD",
+      "verifiedAt": "2026-10-31",
+      "notes": "店舗管理番号431013838305。支払総額は展示店で11月登録の場合。茨城県内販売限定。"
+    },
+    {
+      "vehicleId": "prius",
+      "powertrain": "phev",
+      "grade": "Z",
+      "modelYear": 2023,
+      "km": 30000,
+      "totalMan": 359.9,
+      "source": "トヨタ認定中古車 / 長野トヨタ Chu CAR BOX飯田店",
+      "url": "https://toyota.jp/ucar/cardetail/044012P11903/",
+      "repairHistory": "none",
+      "seats": 5,
+      "drive": "2WD",
+      "verifiedAt": "2026-10-31",
+      "notes": "支払総額は展示店で11月登録の場合。近隣県への販売限定。"
     }
   ]
 }
