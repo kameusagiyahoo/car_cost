@@ -2,6 +2,8 @@
 """Stage reviewed listing records. Dry-run by default; --apply writes after validation."""
 import argparse
 import json
+import math
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -38,14 +40,18 @@ def main():
                 raise ValueError(f"item {i}: unknown vehicle or powertrain")
             if type(x["modelYear"]) is not int or not 1990 <= x["modelYear"] <= 2026:
                 raise ValueError(f"item {i}: invalid model year")
-            if type(x["km"]) not in (int, float) or not 0 <= x["km"] <= 1000000:
+            if type(x["km"]) not in (int, float) or not math.isfinite(x["km"]) or not 0 <= x["km"] <= 1000000:
                 raise ValueError(f"item {i}: invalid mileage")
-            if type(x["totalMan"]) not in (int, float) or not 0 < x["totalMan"] <= 10000:
+            if type(x["totalMan"]) not in (int, float) or not math.isfinite(x["totalMan"]) or not 0 < x["totalMan"] <= 10000:
                 raise ValueError(f"item {i}: invalid total price")
             if type(x["seats"]) is not int or not 1 <= x["seats"] <= 10:
                 raise ValueError(f"item {i}: invalid seat count")
             if x["drive"] not in ("2WD", "4WD") or x["repairHistory"] not in ("none", "yes", "unknown"):
                 raise ValueError(f"item {i}: invalid drive or repair history")
+            if not isinstance(x["verifiedAt"], str) or not re.fullmatch(r"\\d{4}-\\d{2}-\\d{2}", x["verifiedAt"]):
+                raise ValueError(f"item {i}: invalid verification date")
+            if not isinstance(x["url"], str):
+                raise ValueError(f"item {i}: URL must be a string")
             u = urlsplit(x["url"])
             if u.scheme != "https" or not u.netloc:
                 raise ValueError(f"item {i}: invalid HTTPS URL")
