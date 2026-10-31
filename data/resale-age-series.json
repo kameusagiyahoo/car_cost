@@ -39,6 +39,81 @@
         }
       ],
       "limitations": "異なる年式の平均値を比較した横断面。装備・走行距離は均一ではなく、将来価格の統計的予測区間ではない。"
+    },
+    {
+      "vehicleId": "sienta",
+      "powertrain": "hev",
+      "grade": "Z",
+      "source": "リセバ総研 2026-10-17 ハイブリッドZ年式別平均",
+      "url": "https://resalevalue.jp/article/sienta_20261017/",
+      "observations": [
+        {
+          "age": 0,
+          "modelYear": 2026,
+          "averageBuybackMan": 269.8333
+        },
+        {
+          "age": 1,
+          "modelYear": 2025,
+          "averageBuybackMan": 251.3333
+        },
+        {
+          "age": 2,
+          "modelYear": 2024,
+          "averageBuybackMan": 231.7647
+        },
+        {
+          "age": 3,
+          "modelYear": 2023,
+          "averageBuybackMan": 217.36
+        },
+        {
+          "age": 4,
+          "modelYear": 2022,
+          "averageBuybackMan": 216
+        }
+      ],
+      "limitations": "グレード別平均。各年式の平均走行距離は掲載なし。年式と走行距離の効果は分離不可。"
+    },
+    {
+      "vehicleId": "sienta",
+      "powertrain": "hev",
+      "grade": "ALL",
+      "source": "リセバ総研 2026-10-24 MXPL10G年式別平均走行距離付き",
+      "url": "https://resalevalue.jp/article/sienta/",
+      "observations": [
+        {
+          "age": 0,
+          "modelYear": 2026,
+          "averageBuybackMan": 250.8,
+          "averageKm": 5338
+        },
+        {
+          "age": 1,
+          "modelYear": 2025,
+          "averageBuybackMan": 249,
+          "averageKm": 15752
+        },
+        {
+          "age": 2,
+          "modelYear": 2024,
+          "averageBuybackMan": 232.5,
+          "averageKm": 19377
+        },
+        {
+          "age": 3,
+          "modelYear": 2023,
+          "averageBuybackMan": 214.1818,
+          "averageKm": 30884
+        },
+        {
+          "age": 4,
+          "modelYear": 2022,
+          "averageBuybackMan": 185.5,
+          "averageKm": 32111
+        }
+      ],
+      "limitations": "MXPL10G型全グレード混合。年式ごとの平均値で個票ではない。グレード構成・装備・車両状態差が交絡。"
     }
   ],
   "forecast": {
@@ -46,5 +121,9 @@
     "lowDecline": 0.06,
     "highDecline": 0.18,
     "meaning": "低減価率6%は売却額の上限、高減価率18%は下限。感度分析用の仮定値であり信頼区間ではない。"
+  },
+  "modelPolicy": {
+    "description": "年式と平均走行距離が同時掲載されたMXPL10G型横断面を使い、log(買取額)=切片+車齢係数×車齢+走行距離係数×万kmの最小二乗回帰を診断用に計算。グレード混合・少数集計点のため本番TCOの売却予測には適用しない。",
+    "minPoints": 5
   }
 }
