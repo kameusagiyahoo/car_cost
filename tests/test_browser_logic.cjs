@@ -13,8 +13,13 @@ const store=new Map();const context={alert:()=>{},localStorage:{getItem:k=>store
 vm.createContext(context);
 vm.runInContext(source,context);
 vm.runInContext("catalog={vehicles:[{id:'prius',powertrains:[{id:'phev',label:'PHEV',grade:'Z',newPriceMan:400,kmPerLiter:20,priceEvidence:{kind:'assumption'}}]}]};assumptions={usedPriceRatios:{3:0.8},fuelYenPerLiter:175,annualMaintenanceMan:{phev:5},annualVoluntaryInsuranceMan:{phev:3},annualCompulsoryInsuranceMan:{phev:1},grantMan:0,resaleEvidence:{kind:'assumption'}};usedListings=[];",context);
+elements.set('candidateComparison',{innerHTML:'',querySelectorAll:()=>[]});
 const calc=()=>vm.runInContext("calculate(catalog.vehicles[0].powertrains[0],false)",context);
 let x=calc();
+vm.runInContext("candidates=[{model:'prius',powertrain:'phev',isUsed:false},{model:'prius',powertrain:'phev',isUsed:true}];renderCandidateComparison();",context);
+assert.match(elements.get('candidateComparison').innerHTML,/総保有コスト/);
+assert.match(elements.get('candidateComparison').innerHTML,/中古/);
+vm.runInContext('candidates=[];',context);
 elements.get('vehiclePriceNew').value='450';
 assert.equal(calc().price,450);
 elements.get('vehicleFuelEconomy').value='25';
